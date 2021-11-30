@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Average speed</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+  <div id="chart" style="width:100%;height:75vh;"></div>
+  <script>
+    async function createChart() {
+      var resp = await fetch('http://localhost:3000/graphql', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          query: `
+          {
+            speeds {
+              avgSpeed
+              startTime
+            }
+          }`
+        })
+      });
+      var json = await resp.json();
+      var table = json.data;
+
+      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+      var data = [{
+        x: table.speeds.map(row => new Date(row.startTime.substring(0,10)).toDateString("en-US")),
+        y: table.speeds.map(row => row.avgSpeed),
+        type: 'line',
+      }]
+      console.log(data)
+
+      var layout = {
+        title: 'Average speed',
+        xaxis: {
+          title: 'Date',
+        },
+        yaxis: {
+          title: 'Average Speed',
+          range: [0,100]
+        }
+      };
+      var config = { responsive: true };
+      Plotly.newPlot("chart", data, layout, config);
+    } 
+    createChart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Average speed vs PM2.5</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+  <div id="chart" style="width:100%;height:75vh;"></div>
+  <script>
+    async function createChart() {
+      var resp = await fetch('http://localhost:3000/graphql', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          query: `
+          {
+            speeds {
+              avgSpeed
+              pm25
+            }
+          }`
+        })
+      });
+      var json = await resp.json();
+      var table = json.data;
+
+      table.speeds.sort((a, b) => {
+        return a.avgSpeed - b.avgSpeed;
+      });
+
+      var data = [{
+        x: table.speeds.map(row => row.avgSpeed),
+        y: table.speeds.map(row => row.pm25),
+        type: 'line',
+      }]
+      console.log(data)
+
+      var layout = {
+        title: 'Average speed vs PM2.5',
+        xaxis: {
+          title: 'Average speed'
+        },
+        yaxis: {
+          title: 'PM 2.5',
+          range: [0,100]
+        }
+      };
+      var config = { responsive: true };
+      Plotly.newPlot("chart", data, layout, config);
+    } 
+    createChart();
+  </script>
+</body>
+</html>

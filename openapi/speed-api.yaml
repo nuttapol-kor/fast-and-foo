@@ -1,0 +1,244 @@
+openapi: 3.0.0
+info:
+  title: Fast and Foo
+  description:
+    The Fast and Foo project establishes a link between vehicle speed and meteorological variables. Measure average vehicle speed and factors influencing vehicle speed i.e, Air quality, Humidity that affect the speed and daily average speed.
+  version: 1.0.0
+servers:
+  - url: /speed/v1
+paths:
+  /speeds:
+    get:
+      summary: Returns a list speed data.
+      operationId: controller.get_speeds
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Speed'
+  /speeds/{speedId}:
+    parameters:
+    - name: speedId
+      in: path
+      required: true
+      schema:
+        type : integer
+    get:
+      summary: Return speed value in km/hr
+      operationId: controller.get_specific_speed
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speed'
+          links:
+            pm25:
+              operationId: controller.get_specific_pm25
+              parameters:
+                speedId: $response.body#/speedId
+            temperature:
+              operationId: controller.get_specific_temperature
+              parameters:
+                speedId: $response.body#/speedId
+            humidity:
+              operationId: controller.get_specific_humidity
+              parameters:
+                speedId: $response.body#/speedId
+            rainfall:
+              operationId: controller.get_specific_rainfall
+              parameters:
+                speedId: $response.body#/speedId
+  /speeds/{lat}/{lon}/traffic-report:
+    parameters:
+    - name: lat
+      in: path
+      required: true
+      schema:
+        type: number
+    - name: lon
+      in: path
+      required: true
+      schema:
+        type: number
+    get:
+      summary: Return a traffic report it traffic jam or not
+      operationId: controller.get_traffic_report
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrafficReport'
+  /pm25/{speedId}:
+    parameters:
+    - name: speedId
+      in: path
+      required: true
+      schema:
+        type : integer
+    get:
+      summary: Return pm2.5 value in float type
+      operationId: controller.get_specific_pm25
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: number
+  /pm25/{lat}/{lon}/report:
+    parameters:
+    - name: lat
+      in: path
+      required: true
+      schema:
+        type : number
+    - name: lon
+      in: path
+      required: true
+      schema:
+        type : number
+    get:
+      summary: Return air quality report
+      operationId: controller.get_air_report
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AqiReport'
+  /tmd/{lat}/{lon}/report:
+    parameters:
+    - name: lat
+      in: path
+      required: true
+      schema:
+        type : number
+    - name: lon
+      in: path
+      required: true
+      schema:
+        type : number
+    get:
+      summary: Return rainfall report
+      operationId: controller.get_tmd_report
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TmdReport'
+  /tmd/{speedId}/temperature:
+    parameters:
+    - name: speedId
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Return temperaturn as a float value
+      operationId: controller.get_specific_temperature
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: number
+  /tmd/{speedId}/humidity:
+    parameters:
+    - name: speedId
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Return humidity as a integer value
+      operationId: controller.get_specific_humidity
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: integer
+  /tmd/{speedId}/rainfall:
+    parameters:
+    - name: speedId
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Return rainfall as a float value
+      operationId: controller.get_specific_rainfall
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: number
+
+components:
+  schemas:
+    Speed:
+      type: object
+      properties:
+        speedId:
+          type: integer
+        startTime:
+          type: string
+        endTime:
+          type: string
+        avgSpeed:
+          type: number
+          description: average speed
+        latStart:
+          type: number
+        lonStart:
+          type: number
+        latEnd:
+          type: number
+        lonEnd:
+          type: number
+    TrafficReport:
+      type: object
+      properties:
+        date:
+          type: string
+        time:
+          type: string
+        trafficStatus:
+          type: string
+    AqiReport:
+      type: object
+      properties:
+        date:
+          type: string
+        time:
+          type: string
+        pm25:
+          type: number
+        airQuality:
+          type: string
+    TmdReport:
+      type: object
+      properties:
+        date:
+          type: string
+        time:
+          type: string
+        rainfall:
+          type: number
+        rainStatus:
+          type: string

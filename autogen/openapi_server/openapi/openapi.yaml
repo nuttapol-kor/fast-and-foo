@@ -1,0 +1,319 @@
+openapi: 3.0.0
+info:
+  description: Coming soon JeeJee
+  title: Fast and Foo
+  version: 1.0.0
+servers:
+- url: /speed/v1
+paths:
+  /pm25/{lat}/{lon}/report:
+    get:
+      operationId: controller_get_air_report
+      parameters:
+      - explode: false
+        in: path
+        name: lat
+        required: true
+        schema:
+          type: number
+        style: simple
+      - explode: false
+        in: path
+        name: lon
+        required: true
+        schema:
+          type: number
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AqiReport'
+          description: Success
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /pm25/{speedId}:
+    get:
+      operationId: controller_get_specific_pm25
+      parameters:
+      - explode: false
+        in: path
+        name: speedId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: number
+          description: Success
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /speeds:
+    get:
+      operationId: controller_get_speeds
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Speed'
+                type: array
+          description: Success
+      summary: Returns a list speed data.
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /speeds/{lat}/{lon}/traffic-report:
+    get:
+      operationId: controller_get_traffic_report
+      parameters:
+      - explode: false
+        in: path
+        name: lat
+        required: true
+        schema:
+          type: number
+        style: simple
+      - explode: false
+        in: path
+        name: lon
+        required: true
+        schema:
+          type: number
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrafficReport'
+          description: Success
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /speeds/{speedId}:
+    get:
+      operationId: controller_get_specific_speed
+      parameters:
+      - explode: false
+        in: path
+        name: speedId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Speed'
+          description: Success
+          links:
+            pm25:
+              operationId: controller.get_specific_pm25
+              parameters:
+                speedId: $response.body#/speedId
+            temperature:
+              operationId: controller.get_specific_temperature
+              parameters:
+                speedId: $response.body#/speedId
+            humidity:
+              operationId: controller.get_specific_humidity
+              parameters:
+                speedId: $response.body#/speedId
+            rainfall:
+              operationId: controller.get_specific_rainfall
+              parameters:
+                speedId: $response.body#/speedId
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /tmd/{lat}/{lon}/report:
+    get:
+      operationId: controller_get_tmd_report
+      parameters:
+      - explode: false
+        in: path
+        name: lat
+        required: true
+        schema:
+          type: number
+        style: simple
+      - explode: false
+        in: path
+        name: lon
+        required: true
+        schema:
+          type: number
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TmdReport'
+          description: Success
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /tmd/{speedId}/humidity:
+    get:
+      operationId: controller_get_specific_humidity
+      parameters:
+      - explode: false
+        in: path
+        name: speedId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: integer
+          description: Success
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /tmd/{speedId}/rainfall:
+    get:
+      operationId: controller_get_specific_rainfall
+      parameters:
+      - explode: false
+        in: path
+        name: speedId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: number
+          description: Success
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+  /tmd/{speedId}/temperature:
+    get:
+      operationId: controller_get_specific_temperature
+      parameters:
+      - explode: false
+        in: path
+        name: speedId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: number
+          description: Success
+      summary: JeeJee
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+components:
+  schemas:
+    Speed:
+      example:
+        latEnd: 5.637376656633329
+        latStart: 1.4658129805029452
+        speedId: 0
+        lonStart: 5.962133916683182
+        startTime: startTime
+        lonEnd: 2.3021358869347655
+        endTime: endTime
+        avgSpeed: 6.027456183070403
+      properties:
+        speedId:
+          title: speedId
+          type: integer
+        startTime:
+          title: startTime
+          type: string
+        endTime:
+          title: endTime
+          type: string
+        avgSpeed:
+          description: average speed
+          title: avgSpeed
+          type: number
+        latStart:
+          title: latStart
+          type: number
+        lonStart:
+          title: lonStart
+          type: number
+        latEnd:
+          title: latEnd
+          type: number
+        lonEnd:
+          title: lonEnd
+          type: number
+      title: Speed
+      type: object
+    TrafficReport:
+      example:
+        date: date
+        time: time
+        trafficStatus: trafficStatus
+      properties:
+        date:
+          title: date
+          type: string
+        time:
+          title: time
+          type: string
+        trafficStatus:
+          title: trafficStatus
+          type: string
+      title: TrafficReport
+      type: object
+    AqiReport:
+      example:
+        date: date
+        airQuality: airQuality
+        pm25: 0.8008281904610115
+        time: time
+      properties:
+        date:
+          title: date
+          type: string
+        time:
+          title: time
+          type: string
+        pm25:
+          title: pm25
+          type: number
+        airQuality:
+          title: airQuality
+          type: string
+      title: AqiReport
+      type: object
+    TmdReport:
+      example:
+        date: date
+        rainfall: 0.8008281904610115
+        rainStatus: rainStatus
+        time: time
+      properties:
+        date:
+          title: date
+          type: string
+        time:
+          title: time
+          type: string
+        rainfall:
+          title: rainfall
+          type: number
+        rainStatus:
+          title: rainStatus
+          type: string
+      title: TmdReport
+      type: object
