@@ -14,11 +14,11 @@ The Fast and Foo project establishes a link between vehicle speed and meteorolog
 ## Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/nuttapol-kor/fast-and-foo.git
    ```
 2. Change directory
     ```sh
-   cd some-folder
+   cd fast-and-foo
    ```
 3. Install required libraries
    ```sh
