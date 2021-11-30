@@ -10,6 +10,14 @@ The Fast and Foo project establishes a link between vehicle speed and meteorolog
 ### Prerequisites
   1. Install [Node.js](https://nodejs.org/en/download/)
   2. Install [Python](https://www.python.org/downloads/)
+  3. Create database and table for connect to this project see on the below section
+
+### Database and Table
+   1. Create datebase with any name in phpMyAdmin (MySQL)
+   2. Create 3 table in the datebase that you just created
+      - aqiProject ![Imgur](https://i.imgur.com/TOmJ2ko.jpg)
+      - speedmeter ![Imgur](https://i.imgur.com/6Bu7II7.jpg)
+      - tmdProject ![Imgur](https://i.imgur.com/jTXPN5m.jpg)
 
 ## Installation
 1. Clone the repo
@@ -27,6 +35,14 @@ The Fast and Foo project establishes a link between vehicle speed and meteorolog
 4. Install OpenAPI-to-GraphQL
    ```sh
    npm install -g openapi-to-graphql-cli@2.5.0
+   ```
+5. Edit `example.env` for your credential
+   ```
+   OPENAPI_AUTOGEN_DIR="autogen"
+   DB_HOST="Your database host"
+   DB_USER="Your username"
+   DB_PASSWD="Your password"
+   DB_NAME="Your table name"
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
