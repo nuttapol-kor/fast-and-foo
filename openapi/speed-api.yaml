@@ -67,7 +67,7 @@ paths:
       schema:
         type: number
     get:
-      summary: Return a traffic report (Clear road or Traffic)
+      summary: Return a traffic report (Clear road or Traffic jam)
       operationId: controller.get_traffic_report
       responses:
         200:
