@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Average speed</title>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="utf-8">
+  <title>Speed and Date</title>
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 <body>
   <div id="chart" style="width:100%;height:75vh;"></div>
   <script>
@@ -30,26 +37,41 @@
       var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
       var data = [{
-        x: table.speeds.map(row => new Date(row.startTime.substring(0,10)).toDateString("en-US")),
+        x: table.speeds.map(row => new Date(row.startTime.substring(0, 10)).toDateString("en-US")),
         y: table.speeds.map(row => row.avgSpeed),
         type: 'line',
-      }]
+        line: {
+          color: '#ff5755',
+          width: 2
+        },
+
+      },
+      ]
       console.log(data)
 
       var layout = {
-        title: 'Average speed',
+        title: 'Speed and Date',
         xaxis: {
           title: 'Date',
+          gridcolor: "#797979",
+          gridwidth: 0.5
         },
         yaxis: {
           title: 'Average Speed',
-          range: [0,100]
-        }
+          range: [0, 100],
+          gridcolor: "#797979",
+          gridwidth: 0.5
+        },
+        plot_bgcolor: "black",
+        paper_bgcolor: "black",
+        font: { color: "white" },
+
       };
       var config = { responsive: true };
       Plotly.newPlot("chart", data, layout, config);
-    } 
+    }
     createChart();
   </script>
 </body>
+
 </html>
