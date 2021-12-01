@@ -61,6 +61,16 @@ The Fast and Foo project establishes a link between vehicle speed and meteorolog
    -  GraphQL window avalible on http://localhost:3000/graphql
 3. Open the index page in `html\index.html`
 
+## Interact with our database
+1. Your can just download openapi-to-graphql and run with this command
+   ```sh
+   openapi-to-graphql --cors -u https://daq-fast-and-foo.herokuapp.com/speed/v1 openapi/speed-api.yaml
+   ```
+   - GraphQL window avalible on http://localhost:3000/graphql
+
+But the query it quite slow, you need to wait for 15-30 second
+
+2. Open the index page in `html\index.html`
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributor
