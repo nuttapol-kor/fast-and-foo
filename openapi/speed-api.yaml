@@ -9,7 +9,7 @@ servers:
 paths:
   /speeds:
     get:
-      summary: Returns a list speed data.
+      summary: Returns a list of average speed data
       operationId: controller.get_speeds
       responses:
         200:
@@ -28,7 +28,7 @@ paths:
       schema:
         type : integer
     get:
-      summary: Return speed value in km/hr
+      summary: Return average speed value in km/hr
       operationId: controller.get_specific_speed
       responses:
         200:
@@ -67,7 +67,7 @@ paths:
       schema:
         type: number
     get:
-      summary: Return a traffic report it traffic jam or not
+      summary: Return a traffic report (Clear road or Traffic)
       operationId: controller.get_traffic_report
       responses:
         200:
@@ -84,7 +84,7 @@ paths:
       schema:
         type : integer
     get:
-      summary: Return pm2.5 value in float type
+      summary: Return pm 2.5 value in float type
       operationId: controller.get_specific_pm25
       responses:
         200:
@@ -128,7 +128,7 @@ paths:
       schema:
         type : number
     get:
-      summary: Return rainfall report
+      summary: Return rainfalls report
       operationId: controller.get_tmd_report
       responses:
         200:
@@ -145,7 +145,7 @@ paths:
       schema:
         type: integer
     get:
-      summary: Return temperaturn as a float value
+      summary: Return temperature as a float value
       operationId: controller.get_specific_temperature
       responses:
         200:
@@ -162,7 +162,7 @@ paths:
       schema:
         type: integer
     get:
-      summary: Return humidity as a integer value
+      summary: Return humidity as an integer value
       operationId: controller.get_specific_humidity
       responses:
         200:
@@ -179,7 +179,7 @@ paths:
       schema:
         type: integer
     get:
-      summary: Return rainfall as a float value
+      summary: Return rainfalls as a float value
       operationId: controller.get_specific_rainfall
       responses:
         200:
