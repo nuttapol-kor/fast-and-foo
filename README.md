@@ -101,9 +101,10 @@ In our daily lives, we must all travel regularly, whether from home to work or f
 #### How to create the Database and Table
    1. Create datebase in phpMyAdmin (MySQL)
    2. Create 3 tables in your datebase with schema as follows:
-      - aqiProject ![Imgur](https://i.imgur.com/TOmJ2ko.jpg)
-      - speedmeter ![Imgur](https://i.imgur.com/6Bu7II7.jpg)
-      - tmdProject ![Imgur](https://i.imgur.com/jTXPN5m.jpg)
+      - aqiProject <br> ![Imgur](https://i.imgur.com/TOmJ2ko.jpg)
+      - speedmeter <br> ![Imgur](https://i.imgur.com/6Bu7II7.jpg)
+      - tmdProject <br> ![Imgur](https://i.imgur.com/jTXPN5m.jpg)
+      
 <p align="right"><i><a href="#contents">Bact to contents</a></i></p>
 
 ## Instructions for building and running
