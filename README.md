@@ -23,6 +23,7 @@
 ***
 ## Overview
 <div align="center"><img src="https://www.img.in.th/images/3d7def8b0aaadea790e24c4c982c31b7.png" alt="3d7def8b0aaadea790e24c4c982c31b7.png" border="0" /></div>
+
 In our daily lives, we must all travel regularly, whether from home to work or from home to university. As a result, travel is a vital and unavoidable aspect of our everyday lives, and vehicles have virtually become an extension of our bodies. It is indisputable that we have no means of knowing how long it will take us to reach our destination or what may cause delays when we are on a vehicle. As a result, it is where our project began. The pain points of our project are that users don't know what days of the week the traffic will be heavy and what variables will cause travel delays. So *Big Foo with the T* team created the **Fast and Foo** project. Our project is to monitor vehicle speed and the factors that influence it. Also show a graph to anticipate which variable affects the vehicle's speed i.e, [air quality](https://aqicn.org/city/bangkok), [humidity](https://en.wikipedia.org/wiki/Humidity), and [PM 2.5](https://molekule.science/what-is-pm-2-5-and-how-can-you-reduce-your-exposure/). **The purpose of the project is to let the user know what variables affect the vehicle speed and average daily speed graph.**
 
 <p align="right"><i><a href="#contents">Bact to contents</a></i></p>
