@@ -104,12 +104,12 @@ In our daily lives, we must all travel regularly, whether from home to work or f
       - aqiProject <br> ![Imgur](https://i.imgur.com/TOmJ2ko.jpg)
       - speedmeter <br> ![Imgur](https://i.imgur.com/6Bu7II7.jpg)
       - tmdProject <br> ![Imgur](https://i.imgur.com/jTXPN5m.jpg)
-      
+
 <p align="right"><i><a href="#contents">Bact to contents</a></i></p>
 
 ## Instructions for building and running
 
-1. **Clone** [Fast and Foo](https://github.com/nuttapol-kor/fast-and-foo) project to your machine. [*See how to clone the project.*](https://github.com/nuttapol-kor/fast-and-foo#how-to-clone-fast-and-foo)
+1. **Clone** [Fast and Foo](https://github.com/nuttapol-kor/fast-and-foo) project to your machine. [*See how to clone the project.*](https://github.com/nuttapol-kor/fast-and-foo#how-to-clone-fast-and-foo-project)
 
 2. Change directory to the directory that contain `fast-and-foo` folder
     ```sh
