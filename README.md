@@ -23,6 +23,7 @@
 ***
 ## Overview
 ![0c287d2c0459705e09761c5fd9991f1b.png](https://www.img.in.th/images/0c287d2c0459705e09761c5fd9991f1b.png)
+
 In our daily lives, we must all travel regularly, whether from home to work or from home to university. As a result, travel is a vital and unavoidable aspect of our everyday lives, and vehicles have virtually become an extension of our bodies. It is indisputable that we have no means of knowing how long it will take us to reach our destination or what may cause delays when we are on a vehicle. As a result, it is where our project began. The pain points of our project are that users don't know what days of the week the traffic will be heavy and what variables will cause travel delays. So *Big Foo with the T* team created the **Fast and Foo** project. Our project is to monitor vehicle speed and the factors that influence it. Also show a graph to anticipate which variable affects the vehicle's speed i.e, [air quality](https://aqicn.org/city/bangkok), [humidity](https://en.wikipedia.org/wiki/Humidity), and [PM 2.5](https://molekule.science/what-is-pm-2-5-and-how-can-you-reduce-your-exposure/). **The purpose of the project is to let the user know what variables affect the vehicle speed and average daily speed graph.**
 
 <p align="right"><i><a href="#contents">Bact to contents</a></i></p>
@@ -48,8 +49,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
 |----------------------|------------|
 |Speed and Date| Let the user knows which days are most likely to be traffic jams, as indicated by the reduced speed. Help the user chooses travel dates that are convenient for travel.|
 |Speed and PM 2.5|Shows the user where traffic is prone to traffic jams, which can be seen from the higher PM 2.5 value resulting from the high amount of car smoke along the route resulting in lower average speed.|
-|Speed and Rainfalls|Shows the user how much rainfall affects average speed, which is helpful so they can avoid picking days with low temperatures and high humidity that result in rainfall.
-|
+|Speed and Rainfalls|Shows the user how much rainfall affects average speed, which is helpful so they can avoid picking days with low temperatures and high humidity that result in rainfall.|
 
 <p align="right"><i><a href="#contents">Bact to contents</a></i></p>
 
@@ -245,37 +245,25 @@ In our daily lives, we must all travel regularly, whether from home to work or f
 ## Team Members
 
 
-> [Nuttapol Korcharoenrat](https://github.com/nuttapol-kor)
-<br>
-Software and Knowledge Engineering
-<br>
-Faculty of Engineering
-<br>
-*Kasetsart University*
-<br>
-nuttapol.kor@ku.th
-<br>
+> [Nuttapol Korcharoenrat](https://github.com/nuttapol-kor) <br>
+Software and Knowledge Engineering <br>
+Faculty of Engineering <br>
+*Kasetsart University* <br>
+nuttapol.kor@ku.th <br>
 <br>
 
 > [Phinyaphak Chiradejthanankorn](https://github.com/vnsvakanda) <br>
-Software and Knowledge Engineering
-<br>
-Faculty of Engineering
-<br>
-*Kasetsart University*
-<br>
-phinyaphak.c@ku.th
-<br>
+Software and Knowledge Engineering <br>
+Faculty of Engineering <br>
+*Kasetsart University* <br>
+phinyaphak.c@ku.th <br>
 <br>
 
 > [Pitchapa Sae-lim](https://github.com/PitchapaSaelim) <br>
-Software and Knowledge Engineering
-<br>
-Faculty of Engineering
-<br>
+Software and Knowledge Engineering <br>
+Faculty of Engineering <br>
 *Kasetsart University*
-<br>
-pitchapa.sae@ku.th
+<br> pitchapa.sae@ku.th
 
 
 <p align="right"><i><a href="#contents">Bact to contents</a></i></p>
