@@ -18,6 +18,7 @@
    - [How to clone Fast and Foo project](#how-to-clone-Fast-and-Foo-project)
    - [Instructions for setting up a virtual environment (virtualenv)](#instructions-for-setting-up-a-virtual-environment-(virtualenv))
    - [Interact with our database](#interact-with-our-database)
+- [Presentation](https://docs.google.com/presentation/d/14HPCyUArWzQiSB9pFdEAGZ0WFrSzL7APD4_gsSwnHiM/edit?usp=sharing)
 - [Team Members](#team-members)
 
 ***
