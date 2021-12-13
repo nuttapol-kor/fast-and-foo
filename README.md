@@ -118,7 +118,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
    ```
 3. Follows the [**setting up a virtual environment**](https://github.com/nuttapol-kor/fast-and-foo#instructions-for-setting-up-a-virtual-environment-virtualenv).
 
-3. Install required libraries
+4. Install required libraries
    ```sh
    pip install -r requirements.txt
    ```
@@ -126,12 +126,12 @@ In our daily lives, we must all travel regularly, whether from home to work or f
    * **PyMySQL** This package contains a pure-Python MySQL client library, based on PEP 249. Most public APIs are compatible with mysqlclient and MySQLdb.
    * **python-dotenv** reads key-value pairs from a .env file and can set them as environment variables.
    * **gunicorn** is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model.
-4. Install OpenAPI-to-GraphQL
+5. Install OpenAPI-to-GraphQL
    ```sh
    npm install -g openapi-to-graphql-cli@2.5.0
    ```
    * **OpenAPI-to-GraphQL** generates a GraphQL schema for a given OpenAPI Specification (OAS).
-5. Edit `example.env` for your credential
+6. Edit `example.env` for your credential
    ```
    OPENAPI_AUTOGEN_DIR="autogen"
    DB_HOST="Your database host"
@@ -139,7 +139,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
    DB_PASSWD="Your password"
    DB_NAME="Your table name"
    ```
-6. Start the REST API server
+7. Start the REST API server
    * Linux/MacOS:
       ```
       python3 app.py
@@ -151,17 +151,19 @@ In our daily lives, we must all travel regularly, whether from home to work or f
    - Swagger UI avalible on http://localhost:8080/speed/v1/ui
    
       * **Swagger UI** allows anyone — be it your development team or your end consumers — to visualize and interact with the API’s resources without having any of the implementation logic in place.
-7. In another terminal, start openapi-to-graphql
+8. In another terminal, start openapi-to-graphql
    ```sh
    openapi-to-graphql --cors -u http://localhost:8080/speed/v1 openapi/speed-api.yaml
    ```
    -  GraphQL window avalible on http://localhost:3000/graphql
 
-8. Open the index page in path of `html\index.html` file
-![c9450a73a36714449872e9c2d34a1164.png](https://www.img.in.th/images/c9450a73a36714449872e9c2d34a1164.png)
+9. Open the index page in path of `html\index.html` file
+
+<div align="center"><img src="https://www.img.in.th/images/2891f0cc3772baf6ab94f37dd65d88bd.png" alt="2891f0cc3772baf6ab94f37dd65d88bd.png" border="0" /></div>
+
    - Right click at `html\index.html` file location > Copy Path > Paste path in browser
 
-9. Quit the server
+10. Quit the server
     * Exit the terminal window
         * Linux/MacOS: Press `CTRL + C` button
         * Windows: Press `CTRL + C` button
