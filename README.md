@@ -159,7 +159,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
 
 9. Open the index page in path of `html\index.html` file
 
-<div align="center"><img src="https://www.img.in.th/images/2891f0cc3772baf6ab94f37dd65d88bd.png" alt="2891f0cc3772baf6ab94f37dd65d88bd.png" border="0" /></div>
+<div align="center"><a href="https://imgur.com/wh0OJGN"><img src="https://i.imgur.com/wh0OJGN.png" title="source: imgur.com" /></a></div>
 
    - Right click at `html\index.html` file location > Copy Path > Paste path in browser
 
