@@ -28,7 +28,7 @@
 
 In our daily lives, we must all travel regularly, whether from home to work or from home to university. As a result, travel is a vital and unavoidable aspect of our everyday lives, and vehicles have virtually become an extension of our bodies. It is indisputable that we have no means of knowing how long it will take us to reach our destination or what may cause delays when we are on a vehicle. As a result, it is where our project began. The pain points of our project are that users don't know what days of the week the traffic will be heavy and what variables will cause travel delays. So *Big Foo with the T* team created the **Fast and Foo** project. Our project is to monitor vehicle speed and the factors that influence it. Also show a graph to anticipate which variable affects the vehicle's speed i.e., [air quality](https://aqicn.org/city/bangkok), [humidity](https://en.wikipedia.org/wiki/Humidity), and [PM 2.5](https://molekule.science/what-is-pm-2-5-and-how-can-you-reduce-your-exposure/). **The purpose of the project is to let the user know what variables affect the vehicle speed and average daily speed graph.**
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 ## Features
 ### APIs features
@@ -44,7 +44,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
 | `GET` | /tmd/`{speedId}`/rainfall|Shows rainfalls value|
 | `GET` | /tmd/`{speedId}`/temperature|Shows temperature|
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 ### Data visualization features
 | Graph Title | Feature(s) |
@@ -53,7 +53,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
 |Speed and PM 2.5|Shows the user where traffic is prone to traffic jams, which can be seen from the higher PM 2.5 value resulting from the high amount of car smoke along the route resulting in lower average speed.|
 |Speed and Rainfalls|Shows the user how much rainfall affects average speed, which is helpful so they can avoid picking days with low temperatures and high humidity that result in rainfall.|
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 ## Required libraries and tools
 ### Prerequisite (required) software
@@ -67,7 +67,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
 * **Nodejs** is a JavaScript runtime built on Chrome's V8 JavaScript engine.
    - Install [Node.js](https://nodejs.org/en/download/)
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 #### How to Check Python Version 
 > To check the version installed, open a terminal window and entering the following:
@@ -80,7 +80,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
     python ––version
     ```
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 #### How to Check Nodejs Version 
 > To check the version installed, open a terminal window and entering the following:
@@ -93,7 +93,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
     node ––version
     ```
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 ### Prerequisite (required) database
 
@@ -106,7 +106,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
       - speedmeter <br> ![Imgur](https://i.imgur.com/6Bu7II7.jpg)
       - tmdProject <br> ![Imgur](https://i.imgur.com/jTXPN5m.jpg)
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 ## Instructions for building and running
 
@@ -171,7 +171,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
         deactivate 
         ``` 
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 ### How to clone [Fast and Foo](https://github.com/nuttapol-kor/fast-and-foo) project
 * Access to a command-line/terminal window.
@@ -196,7 +196,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
     git clone https://github.com/nuttapol-kor/fast-and-foo.git
     ```
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 ### Instructions for setting up a virtual environment (virtualenv)
 > **a virtual environment** is a tool that helps to keep dependencies required by different projects separate by creating isolated python virtual environments for them.
@@ -228,7 +228,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
             ```
             env\Scripts\activate
             ```
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 
 
@@ -242,7 +242,7 @@ In our daily lives, we must all travel regularly, whether from home to work or f
    *(The query is quite slow, you need to wait for 15-30 second.)*
 
 2. Open the index page in `html\index.html`
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
 
 
 ## Team Members
@@ -269,4 +269,4 @@ Faculty of Engineering <br>
 <br> pitchapa.sae@ku.th
 
 
-<p align="right"><i><a href="#contents">Bact to contents</a></i></p>
+<p align="right"><i><a href="#contents">Back to contents</a></i></p>
